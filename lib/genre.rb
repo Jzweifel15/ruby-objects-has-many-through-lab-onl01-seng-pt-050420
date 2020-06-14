@@ -6,21 +6,21 @@ class Genre
   def initialize(name)
     @name = name
     @@all.push(self)
-  end
+  end 
 
-  def self.all
-    @@all
-  end
+  def self.all 
+    @@all 
+  end 
 
-  def songs
-    Song.all { |song| song.genre == self }
-  end
+  def songs 
+    Song.all { |song| song.genre == self } 
+  end 
 
-  def artists
-    songs.map(&:artist)
-  end
+  def artists 
+    songs.map(&:artist) 
+  end 
 
-  def add_song(song)
+  def add_song(song) 
     songs.push(song)
   end
-end
+end 
